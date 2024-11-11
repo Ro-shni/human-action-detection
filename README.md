@@ -1,27 +1,25 @@
 # Human Action Detection Using Deep Learning 📹
 ## Overview
-This project aims to develop a Human Action Detection system using deep learning techniques. The model can detect various actions such as Punch, PushUps, and everyday activities like WalkingWithDog and Biking from video sequences. It leverages CNN (Convolutional Neural Networks) for feature extraction and LSTM (Long Short-Term Memory) for temporal sequence learning.
+This project aims to develop a Human Action Detection system using deep learning techniques. The model can detect violent actions such as Punch, PushUps, and everyday activities like WalkingWithDog and Biking from video sequences. It uses Convolutional Neural Networks (CNN) for feature extraction and Long Short-Term Memory (LSTM) for temporal sequence learning.
 
 ## Project Goal
-To create a reliable system that can automatically identify specific human actions in real-time, offering potential use in surveillance and monitoring applications.
+To create a reliable alert system that can automatically identify potentially harmful actions in real-time and notify authorities, aiming to ensure timely intervention and improve safety.
 
 ## Key Features
-- Detects and classifies human actions from video sequences.
+- Detects and classifies human actions from videos.
 - Achieves an accuracy of 91.16% on the validation dataset.
-- Supports real-time action detection using video feed or pre-recorded videos.
-- Deployed using Streamlit for a user-friendly interface.
+- Real-time action detection using video feed or pre-recorded videos.
+- Deployed using Streamlit for user-friendly interaction.
 
 ## Dataset
-The dataset used includes various human action videos categorized into four main classes:
-- **WalkingWithDog**
-- **Punch**
-- **PushUps**
-- **Biking**
+The dataset includes various human action videos categorized into four main classes:
+- WalkingWithDog
+- Punch
+- PushUps
+- Biking
 
 ## Data Preprocessing
-- Video frames are resized and normalized.
-- One-hot encoding is applied to the labels for multi-class classification.
-- Frames are fed into a CNN + LSTM model for feature extraction and temporal analysis.
+The video frames are resized, normalized, and fed into a CNN + LSTM model for processing. The labels are one-hot encoded for multi-class classification.
 
 ## Model Architecture
 The model combines:
@@ -29,18 +27,20 @@ The model combines:
 - **Long Short-Term Memory (LSTM):** For capturing temporal dependencies across sequences of frames.
 - **Softmax Output Layer:** For multi-class classification of actions.
 
-### Architecture Diagram
-```mermaid
-flowchart LR
-    VideoFrames -->|Frame Extraction| CNN --> LSTM -->|Softmax| Output(Predicted Action)
+### Model Architecture Description
+1. **Video Frames** are extracted from video sequences.
+2. The frames pass through the **CNN** for feature extraction.
+3. The extracted features are processed by the **LSTM** to learn temporal dependencies.
+4. The output from LSTM is passed through a **Softmax** layer to classify the detected action.
 
-### Technologies Used
-- **Python:** Programming language
-- **TensorFlow & Keras:** For building and training the deep learning model
-- **OpenCV:** For video processing and frame extraction
-- **Streamlit:** For deploying the model as a web app
-- **NumPy & Pandas:** Data handling
-- **Scikit-learn:** One-hot encoding and data preprocessing
+## Technologies Used
+- **Python**: Programming language
+- **TensorFlow & Keras**: For building and training the deep learning model
+- **OpenCV**: For video processing and frame extraction
+- **Streamlit**: For deploying the model as a web app
+- **NumPy & Pandas**: For data handling
+- **Scikit-learn**: For one-hot encoding and data preprocessing
+
 ## Model Evaluation
 The model achieves a high accuracy of 91.16%. Below is a sample classification report:
 
