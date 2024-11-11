@@ -1,5 +1,4 @@
 # Human Action Detection Using Deep Learning 📹
-
 ## Overview
 This project aims to develop a Human Action Detection system using deep learning techniques. The model can detect various actions such as Punch, PushUps, and everyday activities like WalkingWithDog and Biking from video sequences. It leverages CNN (Convolutional Neural Networks) for feature extraction and LSTM (Long Short-Term Memory) for temporal sequence learning.
 
@@ -35,7 +34,7 @@ The model combines:
 flowchart LR
     VideoFrames -->|Frame Extraction| CNN --> LSTM -->|Softmax| Output(Predicted Action)
 
-## Technologies Used
+### Technologies Used
 - **Python:** Programming language
 - **TensorFlow & Keras:** For building and training the deep learning model
 - **OpenCV:** For video processing and frame extraction
